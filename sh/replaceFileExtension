@@ -1,0 +1,33 @@
+#!/bin/sh
+
+echo ""
+echo "Please enter file extension"
+echo ""
+
+read fileExtension
+echo ""
+
+# if the file extension came with a dot, remove it
+[ "${fileExtension::1}" = "." ] && fileExtension="${fileExtension#.}"
+
+for file in *.${fileExtension}; do
+  echo ${file}
+done
+
+echo ""
+echo "Now enter the new file extension"
+echo ""
+
+read newFileExtension
+echo ""
+
+# if the file extension came with a dot, remove it
+[ "${newFileExtension::1}" = "." ] && newFileExtension="${newFileExtension#.}"
+
+# ${file%.{fileExtension}} -> remove the file extension
+# ${}.${newFileExtension} -> add a new file extension
+for file in *.${fileExtension}; do
+  mv "${file}" "${file%.${fileExtension}}.${newFileExtension}"
+done
+
+echo ""

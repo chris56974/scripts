@@ -1,0 +1,9 @@
+#!/bin/sh
+
+echo "#\n\n## io\n\n## external" >> readme.md
+
+mkdir go python swift cpp java ts ruby 
+
+cargo init rust --vcs none
+
+dotnet new console -o csharp

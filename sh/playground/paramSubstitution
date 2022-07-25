@@ -1,0 +1,17 @@
+#!/bin/sh
+
+prefix="hell"
+suffix="ld"
+string="hello-world"
+
+foo=${string#"$prefix"}
+
+echo ""
+echo ${foo}
+echo ""
+
+foo=${foo%"$suffix"}
+
+echo ""
+echo "${foo}"
+echo ""

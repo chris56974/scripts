@@ -1,0 +1,17 @@
+#!/bin/sh
+
+echo ""
+echo $(pwd)
+echo ""
+echo "Please enter prefix"
+
+echo ""
+read prefix
+echo ""
+
+# ls -d "${prefix}"*/
+for dir in "${prefix}"*; do
+  echo ${dir}
+done
+
+echo ""

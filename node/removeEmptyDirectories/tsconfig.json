@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "rootDir": "src",
+    "outDir": "bin",
+  },
+  "ts-node": {
+    "esm": true
+  },
+  "exclude": [
+    "src/**/*.test.*"
+  ]
+}

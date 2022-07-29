@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "#\n\n## io\n\n## external" >> readme.md
+echo "#\n\n## io\n\n## external" >> README.md
 
 mkdir go python swift cpp java ts ruby 
 

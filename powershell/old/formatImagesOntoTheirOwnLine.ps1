@@ -1,7 +1,5 @@
 # This adds a return between images that are touching each other 
 
-# Example: ![](a.png)![](b.png) -> ![](a.png) \n ![](b.png)
-
 # gci twice to filter dirs I don't want
 # Select-String returns all files that have images in them 
 # -like finds if the images are touching

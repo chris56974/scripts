@@ -1,7 +1,8 @@
-$cwd = Get-Location 
+# This doesn't do what I think it does
+# replace "_" in _fred_ will change it to fred
 
 Write-Output ""
-Get-ChildItem -Path $cwd -Name
+Get-ChildItem -Path (Get-Location) -Name
 Write-Output ""
 
 $oldPrefix = Read-Host -Prompt "What prefix would you like to change?"

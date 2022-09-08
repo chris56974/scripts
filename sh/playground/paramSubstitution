@@ -1,17 +1,15 @@
 #!/bin/sh
 
-prefix="hell"
-suffix="ld"
-string="hello-world"
+he="he"
+ld="ld"
+helloworld="hello-world"
 
-foo=${string#"$prefix"}
+foo=${helloworld#"$he"}
 
 echo ""
 echo ${foo}
-echo ""
 
-foo=${foo%"$suffix"}
+bar=${helloworld%"$ld"}
 
-echo ""
-echo "${foo}"
+echo "${bar}"
 echo ""

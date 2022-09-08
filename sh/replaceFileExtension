@@ -1,13 +1,13 @@
 #!/bin/sh
 
 echo ""
-echo "Please enter file extension"
+echo "What file extension would you like to change?"
 echo ""
 
 read fileExtension
 echo ""
 
-# if the file extension came with a dot, remove it
+# if the file extension starts with a dot, remove it
 [ "${fileExtension::1}" = "." ] && fileExtension="${fileExtension#.}"
 
 for file in *.${fileExtension}; do
@@ -15,7 +15,7 @@ for file in *.${fileExtension}; do
 done
 
 echo ""
-echo "Now enter the new file extension"
+echo "What should the new file extension be?"
 echo ""
 
 read newFileExtension

@@ -1,15 +1,20 @@
 #!/bin/sh
 
 echo ""
-echo $(pwd)
+ls -al
+
 echo ""
-echo "Please enter prefix"
+echo "Please enter prefix to change"
 echo ""
 
 # IFS = Internal Field Separator
 # it's default value is ' ', tab or newline 
-# I'm making it '' so I can include the spaces that the user types in
+# I'm making it '' so I can include any spaces that the user types in
 IFS="" read prefix
+
+echo ""
+echo "Please enter prefix to change"
+echo ""
 
 echo ""
 echo "These folders"

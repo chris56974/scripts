@@ -1,0 +1,21 @@
+#!/bin/sh
+
+echo ""
+ls -al
+
+echo ""
+echo "What prefix would you like to change?"
+
+# IFS = Internal Field Separator
+# it's default value is ' ', tab or newline 
+# I'm making it '' so I can include any spaces that the user types in
+IFS="" read oldPrefix
+
+echo ""
+echo "What should the new prefix be?"
+IFS="" read newPrefix
+
+for dir in "${oldPrefix}"*; do
+  dirPrefixRemoved=${dir#${oldPrefix}}
+  mv "${dir}" "${newPrefix}${dirPrefixRemoved}"
+done

@@ -1,6 +1,16 @@
 #!/bin/sh
 
-echo "#\n\n## IO\n\n## External" >> README.md
+path=$(pwd)
+
+dirname=$(basename "$path")
+
+# ([a-z])([A-Z]) are two capture groups that I reference later as 1 and 2
+# it says any lowercase followed by any uppercase
+# and then replace that with the same thing but a space between them
+# <<< is a herestring
+headername=$(sed -E 's/([a-z])([A-Z])/\1 \2/g' <<< "$dirname")
+
+echo "# ${headername}\n\n## IO\n\n## External" >> README.md
 
 mkdir go python swift cpp java ts ruby kotlin php
 

@@ -1,6 +1,4 @@
 <#
-  This is ridiculous. 
- 
   Rename-Item only works if the result produces a different path.
   But "FOO".ToLower() produces the SAME path, and therefore can't be renamed...
 

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+shopt -q login_shell && echo 'Login shell' || echo 'Not login shell'
+echo $0 # -bash

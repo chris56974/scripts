@@ -12,8 +12,6 @@ headername=$(sed -E 's/([a-z])([A-Z])/\1 \2/g' <<< "$dirname")
 
 echo "# ${headername}\n\n## IO\n\n## External" >> README.md
 
-mkdir go python swift cpp java ts ruby kotlin php
-
 cargo init rust --vcs none
 
 dotnet new console -o csharp

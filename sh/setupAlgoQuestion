@@ -11,7 +11,3 @@ dirname=$(basename "$path")
 headername=$(sed -E 's/([a-z])([A-Z])/\1 \2/g' <<< "$dirname")
 
 echo "# ${headername}\n\n## IO\n\n## External" >> README.md
-
-cargo init rust --vcs none
-
-dotnet new console -o csharp

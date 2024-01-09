@@ -1,0 +1,41 @@
+{
+  "ignore": {
+    "files": [
+      ".DS_Store",
+      "package-lock.json",
+      "license", 
+      "Cargo.lock"
+    ],
+    "fileExtensions": [
+      ".exe",
+      ".app",
+      ".bin",
+      ".pdf",
+      ".doc",
+      ".docx",
+      ".docm",
+      ".dotx",
+      ".pptx",
+      ".ppt",
+      ".flac",
+      ".mp4",
+      ".mp3",
+      ".aac",
+      ".aa",
+      ".opus",
+      ".mov",
+      ".mkv"
+    ],
+    "folders": [
+      ".git",
+      ".venv",
+      "gems",
+      "node_modules",
+      "packages",
+      "site-packages",
+      "target",
+      "vendor",
+      "venv"
+    ]
+  }
+}

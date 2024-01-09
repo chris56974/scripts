@@ -120,3 +120,6 @@ dist
 # trash
 _resources
 Math
+
+target
+gradle

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# You enter the name of the folder you want to remove
+# It will recurse the current directory and find all folders with that name
+# It will then move all the files from those directories one level up (placing them at the same level as the directory)
+# It will then delete that empty directory
+
+echo "Please enter the folder name"
+read target_folder
+
+find . -type d -name "$target_folder" -exec bash -c 'mv "$0"/* "$(dirname "$0")/" && rmdir "$0"' {} \; 2>/dev/null

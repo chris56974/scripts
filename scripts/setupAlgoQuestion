@@ -1,13 +1,20 @@
 #!/bin/sh
 
+# Grab the path and current directory
 path=$(pwd)
-
-dirname=$(basename "$path")
+pathDir=$(basename "$path")
 
 # ([a-z])([A-Z]) are two capture groups that I reference later as 1 and 2
-# it says any lowercase followed by any uppercase
-# and then replace that with the same thing but a space between them
-# <<< is a herestring
-headername=$(sed -E 's/([a-z])([A-Z])/\1 \2/g' <<< "$dirname")
+# it says any lowercase letter followed by any uppercase letter
+# Replace that with the same thing but a space between them
+# <<< is a herestring, I'm feeding the pathDir as stinput to the sed cmd
+# -E allows for "extended" regex (i.e. the capture groups)
+headername=$(sed -E 's/([a-z])([A-Z])/\1 \2/g' <<< "$pathDir")
 
-echo "# ${headername}\n\n## IO\n\n## External" >> README.md
+# tr (translate cmd) uses the :upper: and :lower: character classes
+# to turn the first char from uppercase to lowercase
+# ${variable:offset:length}
+functionName="$(tr '[:upper:]' '[:lower:]' <<< ${pathDir:0:1})${pathDir:1}"
+
+echo "# ${headername}\n" >> README.md
+echo "export function ${functionName}() {\n\t\n}" >> 1.ts

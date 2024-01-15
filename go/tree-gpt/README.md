@@ -6,6 +6,5 @@ It shows the tree cmd output and then the file contents of all those files.
 
 ```bash
 cd treeGPT
-go build -o ../../scripts
-chmod +rwx ../../scripts/treeGPT
+go build -o ../../scripts && chmod +rwx ../../scripts/tree-gpt
 ```

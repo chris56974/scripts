@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo "\n/usr/libexec/java_home -V \n"
+/usr/libexec/java_home -V
+echo "\n"

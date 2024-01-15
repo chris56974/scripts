@@ -18,7 +18,6 @@ func FileCmd() (string, error) {
 	cwdPath := CurrentWorkingDirPath()
 
 	err = filepath.WalkDir(cwdPath, func(path string, d fs.DirEntry, err error) error {
-
 		// If the dir or file is on my ignore list
 		if d.IsDir() && config.Ignore.Folders[d.Name()] {
 			return filepath.SkipDir

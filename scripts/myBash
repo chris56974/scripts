@@ -1,0 +1,2 @@
+#!/bin/sh
+echo "Shell interpreter for /bin/sh: $(readlink -f /bin/sh)"
